@@ -82,3 +82,12 @@ class CrawlFilmsSpider(CrawlSpider):
 
 
 
+# def main():
+#     process = CrawlerProcess()
+#     process.crawl("crawl_films")
+#     # scrapy.crawl("crawl_films")
+#     process.start()
+#     scrapy.save("test1.csv")  
+
+# if __name__ == "__main__":
+#     main()
