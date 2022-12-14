@@ -6,7 +6,45 @@
 import scrapy
 
 
-class ImdbItem(scrapy.Item):
+class ImdbItem_films(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    year = scrapy.Field()
+    duration = scrapy.Field()
+    note = scrapy.Field()
+    n_total = scrapy.Field()
+    Genre = scrapy.Field()
+    Descriptions = scrapy.Field()
+    Director = scrapy.Field()
+    Acteurs = scrapy.Field()
+    Public = scrapy.Field()
+    Pays = scrapy.Field()
+    languages = scrapy.Field()
+    Metacritic = scrapy.Field()
+    senario = scrapy.Field()
+    popularity = scrapy.Field()
+    avis = scrapy.Field()
+    like = scrapy.Field()
+    
+class ImdbItem_series(scrapy.Item):
+    # define the fields for your item here like:
+    title = scrapy.Field()
+    year = scrapy.Field()
+    duration = scrapy.Field()
+    note = scrapy.Field()
+    n_total = scrapy.Field()
+    Genre = scrapy.Field()
+    Descriptions = scrapy.Field()
+    Director = scrapy.Field()
+    Acteurs = scrapy.Field()
+    Public = scrapy.Field()
+    Pays = scrapy.Field()
+    languages = scrapy.Field()
+    # Metacritic = scrapy.Field()
+    senario = scrapy.Field()
+    popularity = scrapy.Field()
+    avis = scrapy.Field()
+    like = scrapy.Field()
+    type = scrapy.Field()
+    
+ 

@@ -7,7 +7,35 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
+import pymongo
+class Films:
 
-class ImdbPipeline:
+    def __init__(self):
+        self.conn = pymongo.MongoClient(
+            'localhost',
+            27017
+        )
+
+        db= self.conn['IMDB']
+        self.collection = db['Films']
+
     def process_item(self, item, spider):
+        self.collection.insert_one(dict(item))
+        return item
+
+
+
+class Series:
+
+    def __init__(self):
+        self.conn = pymongo.MongoClient(
+            'localhost',
+            27017
+        )
+
+        db= self.conn['IMDB']
+        self.collection = db['Series']
+
+    def process_item(self, item, spider):
+        self.collection.insert_one(dict(item))
         return item
